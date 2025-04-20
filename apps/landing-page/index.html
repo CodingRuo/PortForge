@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortForge - Coming Soon!</title>
+
+    <meta name="description" content="PortForge - Ein selbst gehostetes Mini-PaaS zur Vereinfachung von Deployments. Alpha-Status.">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#0d47a1"> <!-- Farbe anpassen -->
+    <meta name="msapplication-TileColor" content="#0d47a1"> <!-- Farbe anpassen -->
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        /* Smooth Transition für Farbwechsel */
+        body, .bg-gradient-to-b {
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        /* Verstecke Sprachblöcke initial (Englisch) */
+        .lang-en { display: none; }
+        .lang-de { display: block; } /* Standard anzeigen */
+
+        /* Style für aktive Buttons */
+        .active-lang, .active-theme {
+           opacity: 0.6;
+           cursor: default;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 antialiased">
+
+    <div class="container min-h-screen flex flex-col items-center justify-center p-6">
+
+        <img src="PortForge_Logo.png" alt="PortForge Logo" class="w-24 h-auto mb-8">
+
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-blue-700 dark:text-blue-400">PortForge</h1>
+
+        <div class="lang-de max-w-2xl mx-auto text-center">
+            <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">
+                Ein kleines, selbst gehostetes PaaS (Platform as a Service), das Deployments einfacher machen soll.
+            </p>
+            <p class="text-md mb-6 text-gray-600 dark:text-gray-400">
+                Gebaut mit Vue.js, Node.js, Docker und dem Ziel, den Prozess vom Code zur laufenden Anwendung zu automatisieren.
+            </p>
+        </div>
+
+        <div class="lang-en max-w-2xl mx-auto text-center">
+            <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">
+                A small, self-hosted PaaS (Platform as a Service) intended to simplify deployments.
+            </p>
+            <p class="text-md mb-6 text-gray-600 dark:text-gray-400">
+                Built with Vue.js, Node.js, Docker aiming to automate the process from code to running application.
+            </p>
+        </div>
+
+
+        <div class="mb-8 text-center">
+            <div class="lang-de">
+                <h2 class="text-2xl font-semibold mb-2">Aktueller Status</h2>
+                <p class="inline-block bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300 px-4 py-1 rounded-full font-medium">
+                    🚧 Alpha - Work in Progress 🚧
+                </p>
+                <p class="mt-3 text-gray-600 dark:text-gray-400">
+                    PortForge befindet sich gerade in der frühen Entwicklungsphase.
+                </p>
+                 <p class="mt-3 text-gray-600 dark:text-gray-400">
+                    Verfolge den Fortschritt auf GitHub:
+                    <a href="https://github.com/CodingRuo/portforge" target="_blank" rel="noopener noreferrer" class="text-orange-600 dark:text-orange-400 hover:underline font-semibold">
+                        PortForge auf GitHub
+                    </a>
+                </p>
+            </div>
+             <div class="lang-en">
+                <h2 class="text-2xl font-semibold mb-2">Current Status</h2>
+                <p class="inline-block bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300 px-4 py-1 rounded-full font-medium">
+                   🚧 Alpha - Work in Progress 🚧
+                </p>
+                 <p class="mt-3 text-gray-600 dark:text-gray-400">
+                   PortForge is currently in the early development phase.
+                </p>
+                 <p class="mt-3 text-gray-600 dark:text-gray-400">
+                   Follow the progress on GitHub:
+                    <a href="https://github.com/CodingRuo/portforge" target="_blank" rel="noopener noreferrer" class="text-orange-600 dark:text-orange-400 hover:underline font-semibold">
+                        PortForge on GitHub
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="flex space-x-4 mb-12">
+             <button id="btn-de" class="lang-switch px-3 py-1 text-sm rounded bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 active-lang">DE</button>
+             <button id="btn-en" class="lang-switch px-3 py-1 text-sm rounded bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600">EN</button>
+             <span class="border-l border-gray-400 dark:border-gray-600 mx-1"></span>
+            <button id="theme-toggle" class="px-3 py-1 rounded bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+
+
+        <footer class="text-center text-sm text-gray-500 dark:text-gray-400">
+            <div class="lang-de">
+                © 2025 René Schober - CodingRuo Development - Lizenziert unter AGPLv3
+            </div>
+             <div class="lang-en">
+                 © 2025 René Schober - CodingRuo Development - Licensed under AGPLv3
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+
+        // Funktion zum Setzen des Themes
+        function setTheme(isDark) {
+            if (isDark) {
+                htmlElement.classList.add('dark');
+                themeIcon.textContent = '☀️'; // Sonne für Light Mode Option
+                localStorage.setItem('theme', 'dark');
+                 themeToggle.classList.add('active-theme'); // Optional: Visuelles Feedback
+            } else {
+                htmlElement.classList.remove('dark');
+                themeIcon.textContent = '🌙'; // Mond für Dark Mode Option
+                localStorage.setItem('theme', 'light');
+                themeToggle.classList.remove('active-theme'); // Optional: Visuelles Feedback
+            }
+        }
+
+        // Initiales Theme prüfen (LocalStorage > Systempräferenz)
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            setTheme(true);
+        } else {
+            setTheme(false);
+        }
+
+        // Event Listener für Theme Toggle Button
+        themeToggle.addEventListener('click', () => {
+            setTheme(!htmlElement.classList.contains('dark'));
+        });
+
+        // --- Sprachumschaltung ---
+        const btnDe = document.getElementById('btn-de');
+        const btnEn = document.getElementById('btn-en');
+        const langDeElements = document.querySelectorAll('.lang-de');
+        const langEnElements = document.querySelectorAll('.lang-en');
+
+        function setLanguage(lang) {
+             // Alle DE verstecken/zeigen
+            langDeElements.forEach(el => {
+                 if (lang === 'de') el.style.display = 'block';
+                 else el.style.display = 'none';
+            });
+             // Alle EN verstecken/zeigen
+             langEnElements.forEach(el => {
+                if (lang === 'en') el.style.display = 'block';
+                else el.style.display = 'none';
+            });
+
+            // Aktiven Button markieren
+            if(lang === 'de') {
+                btnDe.classList.add('active-lang');
+                btnEn.classList.remove('active-lang');
+            } else {
+                btnEn.classList.add('active-lang');
+                btnDe.classList.remove('active-lang');
+            }
+
+            // Sprache im HTML-Tag setzen (gut für SEO/Accessibility)
+            htmlElement.lang = lang;
+             // Auswahl speichern
+             localStorage.setItem('language', lang);
+        }
+
+         // Gespeicherte Sprache laden oder Default (DE)
+         const savedLang = localStorage.getItem('language') || 'de';
+         setLanguage(savedLang);
+
+         // Event Listener für Sprachbuttons
+         btnDe.addEventListener('click', () => setLanguage('de'));
+         btnEn.addEventListener('click', () => setLanguage('en'));
+
+    </script>
+
+</body>
+</html>
