@@ -3,7 +3,7 @@
 <!-- Füge hier den Link/Pfad zu deinem Logo ein -->
 <img src="PortForge_Logo.png" alt="PortForge Logo" width="150"/>
 
-**Ein selbst gehostetes Mini-PaaS (Platform as a Service), gebaut mit Vue, Node.js (Fastify/Express), Docker und viel Enthusiasmus, um Deployments zu vereinfachen.**
+**Ein selbst gehostetes Mini-PaaS (Platform as a Service), gebaut mit Vue/React/Nuxt/Next, Node.js (Fastify/Express/Hono), Docker und viel Enthusiasmus, um Deployments zu vereinfachen.**
 
 **(English version below)**
 
@@ -21,13 +21,13 @@ PortForge ist ein Open-Source-Projekt mit dem Ziel, eine einfache, selbst gehost
 - GitHub-Integration (OAuth für Repo-Auswahl, Webhooks für Auto-Deploy)
 - Verwaltung von Umgebungsvariablen/Secrets
 - Anzeige von Build- und Runtime-Logs
-- Einfache Benutzeroberfläche (Vue.js)
+- Einfache Benutzeroberfläche (Vue.js/React/Nuxt/Next)
 
 ## Technologie-Stack
 
-- **Frontend:** Vue.js 3 (Composition API) mit TypeScript
-- **Backend:** Node.js mit Fastify (oder Express) und TypeScript
-- **Datenbank:** MongoDB
+- **Frontend:** Vue.js / React / Next / Nuxt mit TypeScript
+- **Backend:** Node.js mit und TypeScript
+- **Datenbank:** MongoDB / PostgreSql
 - **Kerntechnologie:** Docker
 - **Reverse Proxy:** Caddy (oder Traefik)
 - **Monorepo Management:** pnpm Workspaces
@@ -47,9 +47,9 @@ Hier ist ein grober Überblick über die geplanten Entwicklungsschritte:
 ### Phase 0: Fundament & Setup (Foundation)
 
 - [x] Projekt-Setup als Monorepo (pnpm Workspaces)
-- [x] Grundstruktur für Backend (Node.js/TS) erstellen
-- [x] Grundstruktur für Frontend (Vue.js/TS) erstellen
-- [ ] Basis-Datenbankmodelle (MongoDB/Mongoose) für `Application`, `Deployment` definieren
+- [x] Grundstruktur für Backend erstellen
+- [x] Grundstruktur für Frontend erstellen
+- [ ] Basis-Datenbankmodelle für `Application`, `Deployment` definieren
 - [ ] Backend API: CRUD für `Application`
 - [ ] Backend: Docker-Engine-Integration (`dockerode`)
 - [ ] Backend API: Endpunkt zum manuellen Starten eines Docker-Builds aus einem lokalen Pfad
@@ -129,7 +129,7 @@ Den vollständigen Lizenztext finden Sie in der Datei [LICENSE](LICENSE).
 <!-- Add the link/path to your logo here -->
 <img src="PortForge_Logo.png" alt="PortForge Logo" width="150"/>
 
-**A self-hosted mini-PaaS (Platform as a Service) built with Vue, Node.js (Fastify/Express), Docker, and lots of enthusiasm to simplify deployments.**
+**A self-hosted mini-PaaS (Platform as a Service) built with Vue/React/Nuxt/Next, Node.js (Fastify/Express/Hono), Docker, and lots of enthusiasm to simplify deployments.**
 
 ## What is PortForge?
 
@@ -145,13 +145,13 @@ PortForge is an open-source project aiming to provide a simple, self-hosted plat
 - GitHub Integration (OAuth for repo selection, Webhooks for auto-deploy)
 - Environment Variable / Secrets Management
 - Display build and runtime logs
-- Simple User Interface (Vue.js)
+- Simple User Interface (Vue.js/React/Nuxt/Next)
 
 ## Technology Stack
 
-- **Frontend:** Vue.js 3 (Composition API) with TypeScript
-- **Backend:** Node.js with Fastify (or Express) and TypeScript
-- **Database:** MongoDB
+- **Frontend:** Vue.js / React / Next / Nuxt with TypeScript
+- **Backend:** Node.js and TypeScript
+- **Database:** MongoDB / PostgreSQL
 - **Core Technology:** Docker
 - **Reverse Proxy:** Caddy (or Traefik)
 - **Monorepo Management:** pnpm Workspaces
@@ -171,9 +171,9 @@ Here's a rough overview of the planned development steps:
 ### Phase 0: Foundation & Setup
 
 - [x] Project setup as a monorepo (pnpm Workspaces)
-- [x] Basic structure for Backend (Node.js/TS) created
-- [x] Basic structure for Frontend (Vue.js/TS) created
-- [ ] Define base database models (MongoDB/Mongoose) for `Application`, `Deployment`
+- [x] Basic structure for Backend created
+- [x] Basic structure for Frontend created
+- [ ] Define base database models for `Application`, `Deployment`
 - [ ] Backend API: CRUD for `Application`
 - [ ] Backend: Docker engine integration (`dockerode`)
 - [ ] Backend API: Endpoint to manually trigger a Docker build from a local path
