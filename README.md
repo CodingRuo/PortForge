@@ -27,7 +27,7 @@ PortForge ist ein Open-Source-Projekt mit dem Ziel, eine einfache, selbst gehost
 
 - **Frontend:** Vue.js / React / Next / Nuxt mit TypeScript
 - **Backend:** Node.js mit und TypeScript
-- **Datenbank:** MongoDB / PostgreSql
+- **Datenbank:** MongoDB / PostgreSQL
 - **Kerntechnologie:** Docker
 - **Reverse Proxy:** Caddy (oder Traefik)
 - **Monorepo Management:** pnpm Workspaces
