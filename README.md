@@ -36,30 +36,24 @@ PortForge is an open-source project aiming to provide a simple, self-hosted plat
 
 🚧 **Work in Progress / Alpha** 🚧
 
-PortForge is under active development. Core features are being implemented and may change. Not recommended for production use!
+> [!CAUTION]
+> PortForge is under active development. Core features are being implemented and may change. Not recommended for productive use!
 
 ## Getting Started (Local Development)
 
-_(Add instructions here later on how to set up and run the project locally)_
-
-```bash
-# Example
-git clone https://github.com/CodingRuo/portforge.git
-cd portforge
-pnpm install
-# ... other steps
-```
+> [!NOTE]  
+> Instructions will be provided at a later date. 
 
 ## Contributing
 
-_(Add contribution guidelines here later, if desired)_
+Thanks to all that contributed to the project. Feel free to help and improve. 
 
-Currently a one-person project, but feedback and ideas are welcome!
+<a href="https://github.com/CodingRuo/PortForge/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=CodingRuo/PortForge" />
+</a>
 
 ## License
 
 This project is licensed under the **GNU Affero General Public License v3.0**.
 
 See the [LICENSE](LICENSE) file for the full license text.
-
----
