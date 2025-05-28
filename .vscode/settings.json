@@ -4,5 +4,9 @@
       "mode": "auto"
     }
   ],
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "always"
+  }
 }
