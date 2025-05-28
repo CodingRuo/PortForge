@@ -11,6 +11,7 @@ import {
     Layers,
     LucideBox,
     LucideChartLine,
+    LucideUser,
     Network,
     Rocket,
     Server,
@@ -109,11 +110,11 @@ const Sidebar = ({ onPageChange }: SidebarProps) => {
             >
                 <div className="flex items-center space-x-3 p-3 rounded-lg glass">
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-purple-500 flex items-center justify-center">
-                        <i className="fas fa-user text-white text-sm"></i>
+                        <LucideUser />
                     </div>
                     <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium text-slate-200">Alex Chen</p>
-                        <p className="text-xs text-slate-400 truncate">alex@portforge.dev</p>
+                        <p className="text-sm font-medium text-slate-200">René Schober</p>
+                        <p className="text-xs text-slate-400 truncate">rene@portforge.dev</p>
                     </div>
                 </div>
             </motion.div>

@@ -1,4 +1,7 @@
+import { FloatingParticles } from "@/components/effects/floating-particle";
+import { MatrixBackground } from "@/components/effects/matrix-background";
 import { Sidebar } from "@/components/layout/sidebar";
+import { TopBar } from "@/components/layout/topbar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -25,6 +28,7 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+
     return (
         <html lang="en">
             <body
@@ -33,9 +37,12 @@ export default function RootLayout({
                 <ReactQueryProvider>
                     <TooltipProvider>
                         <div className="min-h-screen text-slate-50 overflow-x-hidden">
+                            <FloatingParticles />
+                            <MatrixBackground />
                             <div className="min-h-screen flex">
                                 <Sidebar />
                                 <main className="flex-1 overflow-hidden">
+                                    <TopBar />
                                     <div className="h-[calc(100vh-4rem)] overflow-y-auto p-6">
                                         {children}
                                     </div>
